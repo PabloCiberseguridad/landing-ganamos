@@ -1,0 +1,265 @@
+/* app/globals.css — Ganamos.net Squeeze Page v2 */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rajdhani:wght@500;600;700;900&family=Inter:wght@400;500;600&display=swap');
+
+/* ── Reset ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { height: 100%; -webkit-text-size-adjust: 100%; }
+body { height: 100%; font-family: 'Inter', sans-serif; overflow-x: hidden; }
+img  { max-width: 100%; display: block; }
+
+/* ── Root layout ── */
+.squeeze-root {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px 16px;
+}
+
+/* ── Background ── */
+.sq-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    #0D0B2A 0%,
+    #15124A 25%,
+    #1A1060 50%,
+    #150E48 75%,
+    #0D0B2A 100%
+  );
+}
+
+.sq-glow {
+  position: fixed;
+  z-index: 0;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.sq-glow-top {
+  width: 500px;
+  height: 400px;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(120, 60, 220, 0.35) 0%, transparent 70%);
+}
+
+.sq-glow-bottom {
+  width: 400px;
+  height: 300px;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(ellipse, rgba(80, 40, 180, 0.25) 0%, transparent 70%);
+}
+
+/* ── Card ── */
+.squeeze-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  padding: 0 8px;
+}
+
+/* ── Logo ── */
+.sq-logo-wrap {
+  margin-bottom: 40px;
+}
+
+.sq-logo {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 24px rgba(180, 130, 255, 0.3));
+}
+
+/* ── Headline ── */
+.sq-headline-wrap {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.sq-acceso {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 5vw, 24px);
+  letter-spacing: 0.12em;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+/* ── Bono ── */
+.sq-bono-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+}
+
+.sq-bono-label {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(52px, 16vw, 88px);
+  letter-spacing: 0.08em;
+  background: linear-gradient(180deg, #FFE066 0%, #F5C842 35%, #C8890A 70%, #A06800 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter: drop-shadow(0 4px 12px rgba(200, 140, 10, 0.5));
+  margin-bottom: -8px;
+}
+
+.sq-bono-num {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(96px, 30vw, 160px);
+  letter-spacing: 0.02em;
+  background: linear-gradient(180deg, #FFE575 0%, #F5C842 30%, #C8890A 65%, #8A5C00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  filter:
+    drop-shadow(0 6px 20px rgba(200, 140, 10, 0.6))
+    drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+  line-height: 0.88;
+}
+
+.sq-bono-pct {
+  font-size: 0.72em;
+}
+
+/* ── CTA label ── */
+.sq-cta-label {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  font-size: clamp(11px, 3.2vw, 14px);
+  letter-spacing: 0.1em;
+  color: #FFFFFF;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 50px;
+  padding: 8px 20px;
+  margin-bottom: 20px;
+}
+
+/* ── Input ── */
+.sq-input {
+  width: 100%;
+  background: rgba(15, 12, 50, 0.8);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  border-radius: 50px;
+  padding: 18px 28px;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+  text-align: center;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  margin-bottom: 16px;
+  -webkit-appearance: none;
+}
+
+.sq-input::placeholder {
+  color: rgba(255,255,255,0.35);
+}
+
+.sq-input:focus {
+  border-color: rgba(120, 80, 220, 0.7);
+  box-shadow: 0 0 0 3px rgba(120, 80, 220, 0.15);
+}
+
+@keyframes sq-shake {
+  0%, 100% { transform: translateX(0); }
+  20%       { transform: translateX(-8px); }
+  40%       { transform: translateX(8px); }
+  60%       { transform: translateX(-6px); }
+  80%       { transform: translateX(6px); }
+}
+
+.sq-shake {
+  animation: sq-shake 0.5s ease;
+  border-color: rgba(255, 80, 80, 0.7) !important;
+  box-shadow: 0 0 0 3px rgba(255, 80, 80, 0.15) !important;
+}
+
+/* ── WhatsApp Button ── */
+.sq-wa-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: linear-gradient(135deg, #2ECC71, #25D366, #1DA851);
+  border: none;
+  border-radius: 50px;
+  padding: 20px 28px;
+  cursor: pointer;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(20px, 5.5vw, 26px);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow:
+    0 6px 30px rgba(37, 211, 102, 0.45),
+    0 2px 8px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.sq-wa-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.sq-wa-btn:hover::before { opacity: 1; }
+.sq-wa-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 10px 40px rgba(37, 211, 102, 0.6),
+    0 4px 12px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.2);
+}
+.sq-wa-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 15px rgba(37, 211, 102, 0.3);
+}
+
+@keyframes btn-pulse {
+  0%, 100% { box-shadow: 0 6px 30px rgba(37,211,102,0.45), 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2); }
+  50%       { box-shadow: 0 6px 50px rgba(37,211,102,0.7), 0 2px 8px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.2); }
+}
+.sq-wa-btn { animation: btn-pulse 2.5s ease-in-out infinite; }
+.sq-wa-btn:hover { animation: none; }
+
+/* ── Disclaimer ── */
+.sq-disclaimer {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+}
