@@ -4,7 +4,7 @@
 // Número: 5493562547636
 // ─────────────────────────────────────────────
 
-export const WA_NUMBER = '5493562547636';
+export const WA_NUMBER = '5491126205098';
 
 /** Mensajes precargados por botón — optimizados para alta tasa de apertura */
 export const WA_MESSAGES = {
