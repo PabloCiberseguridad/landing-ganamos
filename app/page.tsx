@@ -8,21 +8,17 @@ import { WA_NUMBER } from '@/lib/whatsapp';
 
 export default function Home() {
   const [nombre, setNombre] = useState('');
-  const [shake, setShake] = useState(false);
 
   useEffect(() => {
     trackViewContent('Hero VIP');
   }, []);
 
   const handleClick = () => {
-    if (!nombre.trim()) {
-      setShake(true);
-      setTimeout(() => setShake(false), 600);
-      return;
-    }
     trackWhatsAppLead('WhatsApp Hero');
     const msg = encodeURIComponent(
-      `Hola! Mi nombre es ${nombre.trim()} y quiero reclamar mi bono del 15% en Ganamos 🎰`
+      nombre.trim()
+        ? `Hola! Mi nombre es ${nombre.trim()} y quiero reclamar mi bono del 15% en Ganamos 🎰`
+        : `Hola! Quiero reclamar mi bono del 15% en Ganamos 🎰`
     );
     window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
   };
@@ -64,7 +60,7 @@ export default function Home() {
           value={nombre}
           onChange={e => setNombre(e.target.value)}
           onKeyDown={e => e.key === 'Enter' && handleClick()}
-          className={`sq-input${shake ? ' sq-shake' : ''}`}
+          className="sq-input"
           maxLength={40}
         />
 
