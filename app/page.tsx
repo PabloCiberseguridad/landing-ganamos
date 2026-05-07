@@ -50,7 +50,7 @@ export default function Home() {
           <p className="sq-acceso">ACCESO VIP EXCLUSIVO</p>
           <div className="sq-bono-wrap">
             <p className="sq-bono-label">BONO</p>
-            <p className="sq-bono-num">50<span className="sq-bono-pct">%</span></p>
+            <p className="sq-bono-num">15<span className="sq-bono-pct">%</span></p>
           </div>
         </div>
 
