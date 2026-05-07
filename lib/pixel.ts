@@ -4,7 +4,7 @@
 // PIXEL ID: 2897525123911731
 // ─────────────────────────────────────────────
 
-export const PIXEL_ID = '2897525123911731';
+export const PIXEL_ID = '690508200549399';
 
 declare global {
   interface Window {
