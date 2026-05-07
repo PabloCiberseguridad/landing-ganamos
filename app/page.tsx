@@ -22,7 +22,7 @@ export default function Home() {
     }
     trackWhatsAppLead('WhatsApp Hero');
     const msg = encodeURIComponent(
-      `Hola! Mi nombre es ${nombre.trim()} y quiero reclamar mi bono del 50% en Ganamos 🎰`
+      `Hola! Mi nombre es ${nombre.trim()} y quiero reclamar mi bono del 15% en Ganamos 🎰`
     );
     window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, '_blank');
   };
