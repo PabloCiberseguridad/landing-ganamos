@@ -1,7 +1,7 @@
 // lib/pixel.ts
 // ─────────────────────────────────────────────
 // Meta Pixel helper — todos los eventos del sitio
-// PIXEL ID: 2897525123911731
+// PIXEL ID: 690508200549399
 // ─────────────────────────────────────────────
 
 export const PIXEL_ID = '690508200549399';
@@ -37,7 +37,7 @@ export function trackPageView() {
 export function trackViewContent(sectionName: string) {
   fbq('track', 'ViewContent', {
     content_name: sectionName,
-    content_category: 'Casino Landing',
+    content_category: 'Servicios',
   });
 }
 
@@ -47,7 +47,7 @@ export function trackViewContent(sectionName: string) {
  * @param buttonName  e.g. "WhatsApp Hero", "WhatsApp Beneficios", "WhatsApp Footer"
  */
 export function trackWhatsAppLead(buttonName: string) {
-  fbq('track', 'Lead', {
+  fbq('track', 'Contact', {
     content_name: buttonName,
     content_category: 'WhatsApp CTA',
   });
