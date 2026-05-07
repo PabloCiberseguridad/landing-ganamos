@@ -10,7 +10,7 @@ export default function Home() {
   const [nombre, setNombre] = useState('');
 
   useEffect(() => {
-    trackViewContent('Hero VIP');
+    trackViewContent('Contacto');
   }, []);
 
   const handleClick = () => {
