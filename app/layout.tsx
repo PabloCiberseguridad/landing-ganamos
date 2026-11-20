@@ -5,11 +5,11 @@ import './globals.css';
 import { PIXEL_ID } from '@/lib/pixel';
 
 export const metadata: Metadata = {
-  title: 'Ganamos.net — Creá tu usuario · Bono 15%',
-  description: 'Creamos tu usuario. Bono del 15% en tu primera y segunda carga. Escribinos por WhatsApp.',
+  title: 'Ganamos.net — Acceso VIP · Bono 15%',
+  description: 'Acceso VIP exclusivo. Recibí tu bono del 15% y empezá a jugar hoy. Escribinos por WhatsApp.',
   robots: 'index, follow',
   openGraph: {
-    title: 'Ganamos.net — Creá tu usuario · Bono 15%',
+    title: 'Ganamos.net — Acceso VIP · Bono 15%',
     description: 'Recibí tu bono del 15% y empezá a jugar hoy.',
     type: 'website',
     locale: 'es_AR',
